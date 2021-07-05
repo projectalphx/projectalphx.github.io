@@ -92,7 +92,7 @@
     color: var( --headerLv1TextColour);
   }
  /*Style h3 header*/
-  h3{
+  h4{
     background-color: rgba(255, 255, 255, 0.411);
     padding-top: 40px;
     text-align: center;
@@ -103,7 +103,7 @@
     width:var(--subheaderWidth);
   }
    /*Style h4 header*/
-  h4{
+  h5{
 
     background-color: rgba(255, 255, 255, 0.411);
     text-align: center;
@@ -116,7 +116,7 @@
   }
 
      /*Style h5 header*/
-     h5{
+     h6{
       background-color: rgba(255, 255, 255, 0.411);
       text-align: center;
       padding-top: 10px;
@@ -128,6 +128,12 @@
       color: var( --headerLv2TextColour);
       height:var(--subheaderHeight);
       width:var(--subheaderWidth);
+    }
+    h3{
+      background-color: transparent;
+      text-align: center;
+      font-size: 10px;
+      font-family: 'Trebuchet MS', sans-serif;
     }
 
   /* Create two columns/boxes that floats next to each other */
