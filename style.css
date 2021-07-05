@@ -91,7 +91,7 @@
     font-size: var(--headerLv1TextSize);
     color: var( --headerLv1TextColour);
   }
- /*Style h3 header*/
+ /*Style h4 header*/
   h4{
     background-color: rgba(255, 255, 255, 0.411);
     padding-top: 40px;
@@ -102,7 +102,7 @@
     height:var(--subheaderHeight);
     width:var(--subheaderWidth);
   }
-   /*Style h4 header*/
+   /*Style h5 header*/
   h5{
 
     background-color: rgba(255, 255, 255, 0.411);
@@ -115,8 +115,8 @@
     width:var(--subheaderWidth);
   }
 
-     /*Style h5 header*/
-     h6{
+ /*Style h6 header*/
+ h6{
       background-color: rgba(255, 255, 255, 0.411);
       text-align: center;
       padding-top: 10px;
@@ -129,12 +129,13 @@
       height:var(--subheaderHeight);
       width:var(--subheaderWidth);
     }
-    h3{
+    /*Style h3 header*/
+ h3{
       background-color: transparent;
       text-align: center;
       font-size: 10px;
       font-family: 'Trebuchet MS', sans-serif;
-    }
+}
 
   /* Create two columns/boxes that floats next to each other */
   nav {
