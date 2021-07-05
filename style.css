@@ -1,0 +1,390 @@
+/*Create Common variables to apply colours and sizes easiltu*/
+:root{
+  --headerLv1TextSize:25px;
+  --headerLv1TextColour: white;
+
+  --headerLv2TextSize: 40px;
+  --headerLv2TextColour: black;
+
+  --headerLv3TextSize: 30px;
+  --headerLv3TextColour: black;
+
+  --articletextsize: 20px;
+  --articletextcolour: black;
+
+  --backgroundcolour: white;
+  --primarycolour: #5A8CCF;
+  --secondarycolour: #625ACF;
+  --tertiarycolour: #5AC6CF;
+  --complementaryprimarycolour: #CF9D5A;
+  
+
+  --paddingTop: 10px;
+  --paddingLeft: 20px;
+  --paddingRight: 10px;
+  --paddingBottom: 10px;
+  --padding: 5px;
+
+  --headerHeight: 200px;
+  --headerWidth:  700px;
+
+  --subheaderHeight: 100px;
+  --subheaderWidth:  700px;
+
+  --articleheight: 500px;
+  --articlewidth: 500px;
+
+  --navbarheight: 500px;
+  --navbarwidth: 200px;
+
+  --footerheight: 120px;
+  --footerwidth: 700px;
+
+  --portfolio1articleheight: 2000px;
+  --portfolio1articlewidth: 500px;
+  --portfolio1navbarheight: 500px;
+  --portfolio1navbarwidth: 200px;
+
+
+  --portfolio2articleheight: 3000px;
+  --portfolio2articlewidth: 500px;
+  --portfolio2navbarheight: 500px;
+  --portfolio2navbarwidth: 200px;
+
+}
+
+  /*The box-sizing expression below ensures that all elements are sized intuitively, the asterisk means its applied to all elements*/
+* {
+    box-sizing: border-box;
+  }
+  /*Style the background of the website*/
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('images//webtech_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.116);
+    background-blend-mode: lighten;
+    background-size: cover;
+  }
+  
+  /* Style the header */
+  header {
+    background-color:rgba(255, 255, 255, 0.411);
+    padding: var(--padding);
+    padding-left: var(--paddingLeft);
+    font-size: var(--headerLv1TextSize);
+    color: var( --headerLv1TextColour);
+    height:var(--headerHeight);
+    width:var(--headerWidth);
+  }
+  /*Style Article*/
+  article{
+    padding: 10px;
+    text-align: center;
+  }
+  /*Style h2 header*/
+  h2{
+    background-color: transparent;
+    padding-top: 20px;
+    text-align: center;
+    font-size: var(--headerLv1TextSize);
+    color: var( --headerLv1TextColour);
+  }
+ /*Style h3 header*/
+  h3{
+    background-color: rgba(255, 255, 255, 0.411);
+    padding-top: 40px;
+    text-align: center;
+    font-size: var(--headerLv2TextSize);
+    font-family: 'Trebuchet MS', sans-serif;
+    color: var( --headerLv2TextColour);
+    height:var(--subheaderHeight);
+    width:var(--subheaderWidth);
+  }
+   /*Style h4 header*/
+  h4{
+
+    background-color: rgba(255, 255, 255, 0.411);
+    text-align: center;
+    padding-top: 20px;
+    font-size: var(--headerLv2TextSize);
+    font-family: 'Trebuchet MS', sans-serif;
+    color: var( --headerLv2TextColour);
+    height:var(--subheaderHeight);
+    width:var(--subheaderWidth);
+  }
+
+     /*Style h5 header*/
+     h5{
+      background-color: rgba(255, 255, 255, 0.411);
+      text-align: center;
+      padding-top: 10px;
+      font-size: 15px;
+      padding-bottom: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: 'Trebuchet MS', sans-serif;
+      color: var( --headerLv2TextColour);
+      height:var(--subheaderHeight);
+      width:var(--subheaderWidth);
+    }
+
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: Right;
+    background-color:rgba(255, 255, 255, 0.411);
+    width: var(--navbarwidth);
+    height: var(--navbarheight);
+    color: black;
+  }
+   /*Adds seperation between section with the page name and article*/
+  section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type:none;
+    padding: 0;
+  }
+  nav ol {
+    list-style-type:none;
+    padding: 0;
+  }
+ /*Makes navigation bar verticle*/
+  li {
+    display: block;
+  }
+ /* Style the list inside the menu */
+  a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+ /* Style the list inside the menu */
+  a:visited {
+    color: var(--secondarycolour);
+    background-color: transparent;
+    text-decoration: none;
+  }
+ /* Style the list inside the menu */
+  a:hover {
+    color: var(--complementaryprimarycolour);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+ /* Style the list inside the menu */
+  a:active {
+    color: var( --tertiarycolour);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color:rgba(255, 255, 255, 0.411);
+    padding-top: 5px;
+    text-align: center;
+    width: var(--footerwidth);
+    height: var(--footerheight);
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 700px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+ /*The .class selector selects elements with a specific class attribute.*/
+ /*Below are all .class selectors*/
+
+ /*Defines Center position for div element*/
+ .center-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ /*Defines Center position for div element*/
+ .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*Defines a container not used in grids for div element*/
+  .container {
+    height: 150px;
+    position: relative;
+  }
+/*Defines a container not used in grids for div element for profile picture in About me*/
+  .container-mypicture {
+    height: 220px;
+    position: relative;
+  }
+/*Defines a container used in grids for div element for the middle section element*/
+  .grid-container {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+  }
+/*Defines a single item used in container grids for div element for the middle section element*/
+  .grid-item {
+    background-color: transparent;
+    border: transparent;
+    padding-right: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+/*Defines stylised background for middle section content in 2nd grid for homepage*/
+  .grid-content {
+    background-color:rgba(255, 255, 255, 0.411);
+    font-size: 20px;
+    text-align: center;
+    width: var(--articlewidth);
+    height: var(--articleheight);
+    padding-top: 20px;
+  }
+/*Defines a container used in grids for div element inside homepage content*/
+  .grid-container-homepage-content {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: auto;
+    background-color: transparent;
+  }
+  /*Defines a single item used in container grids for div element inside homepage content*/
+  .grid-item-homepage-content {
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    text-align: center;
+  }
+/*Defines a container used in grids for div element inside mywork content*/
+  .grid-container-mywork-content {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+  }
+  /*Defines a single item used in container grids for div element inside mywork content*/
+  .grid-item-homepage-mywork-content {
+    background-color: transparent;
+    border: transparent;
+    font-size: 10px;
+    text-align: center;
+  }
+/*Defines a container used in grids for div element inside portfolio1 content*/
+  .grid-container-portfolio1 {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+  }
+ /*Defines a single item used in container grids for div element inside portfolio1 content*/
+  .grid-item-portfolio1 {
+    background-color: transparent;
+    border: transparent;
+    padding-right: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  /*Defines stylised background for middle section content in 2nd grid for porfolio1*/
+  .grid-content-portfolio1 {
+    background-color:rgba(255, 255, 255, 0.411);
+    font-size: 30px;
+    text-align: center;
+    width: var(--portfolio1articlewidth);
+    height: var(--portfolio1articleheight);
+    padding-top: 50px;
+  }
+/*Defines a container used in grids for div element inside portfolio1 content*/
+  .grid-container-portfolio1-content {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: auto;
+    background-color: transparent;
+  }
+  /*Defines a single item used in container grids for div element inside porfolio1 content*/
+  .grid-item-portfolio1-content {
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    text-align: center;
+  }
+/*Defines a container used in grids for div element inside portfolio1 content*/
+  .grid-container-portfolio2 {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns:auto auto;
+    background-color: transparent;
+  }
+/*Defines a single item used in container grids for div element inside portfolio2 content*/
+  .grid-item-portfolio2 {
+    background-color: transparent;
+    border: transparent;
+    padding-right: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+   /*Defines stylised background for middle section content in 2nd grid for porfolio2*/
+  .grid-content-portfolio2 {
+    background-color:rgba(255, 255, 255, 0.411);
+    font-size: 30px;
+    text-align: center;
+    width: var(--portfolio2articlewidth);
+    height: var(--portfolio2articleheight);
+    padding-top: 50px;
+
+  }
+/*Defines a container used in grids for div element inside portfolio2 content*/
+  .grid-container-portfolio2-content {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: auto;
+    background-color: transparent;
+
+  }
+  /*Defines a single item used in container grids for div element inside portfolio2 content*/
+  .grid-item-portfolio2-content {
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    text-align: center;
+ 
+  }
+/*defines where floating text for images showup*/
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  
+  }
+  /*define style floating text for images*/
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
